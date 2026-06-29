@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pine Ridge Cottage — Pines &amp; Ponies</title>
+<meta name="description" content="Book Pine Ridge Cottage direct. Forest cabin with a stone fireplace and private dock in the Adirondacks." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --pine:#1c3027;--pine-deep:#13211b;--moss:#46583a;--cream:#f5efe2;--sand:#e8dcc3;
+    --bark:#2a2017;--gold:#b89055;--gold-soft:#cba968;--clay:#b1572f;--ink:#1a160f;--paper:#fbf7ee;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hanken Grotesk",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.06;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .ribbon{position:fixed;top:18px;right:-46px;z-index:200;transform:rotate(45deg);background:var(--clay);color:#fff;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:7px 60px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+
+  nav{position:sticky;top:0;z-index:100;background:rgba(251,247,238,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(42,32,23,.1)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:"Fraunces";font-size:23px;letter-spacing:-.02em}
+  .brand .mark{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--moss),var(--pine));display:grid;place-items:center;color:var(--sand);font-size:17px;flex:none;box-shadow:inset 0 0 0 1.5px var(--gold-soft)}
+  .brand small{display:block;font-family:"Hanken Grotesk";font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--moss);font-weight:600;margin-top:-2px}
+  .back{font-size:13.5px;font-weight:600;color:var(--moss)}
+  .back:hover{color:var(--clay)}
+
+  .crumb{padding:26px 0 6px;font-size:12.5px;letter-spacing:.04em;color:var(--moss)}
+  .crumb a:hover{color:var(--clay)}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:460px;margin-top:8px;border-radius:6px;overflow:hidden}
+  .gal div{background-size:cover;background-position:center;position:relative}
+  .gal .big{grid-row:1/3}
+  .gal div::after{content:"";position:absolute;inset:0;background:linear-gradient(150deg,rgba(28,48,39,.04),rgba(28,48,39,.16))}
+  .gtag{position:absolute;z-index:2;left:16px;bottom:14px;background:rgba(19,33,27,.78);color:var(--cream);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:6px 12px;border-radius:2px}
+
+  .layout{display:grid;grid-template-columns:1fr 380px;gap:56px;padding:44px 0 90px;align-items:start}
+  .ttl .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--clay);font-weight:700}
+  .ttl h1{font-size:clamp(38px,5vw,60px);color:var(--pine);margin:12px 0 8px;font-weight:300}
+  .ttl h1 em{font-style:italic;color:var(--gold)}
+  .ttl .loc{font-size:15px;color:var(--moss)}
+  .ttl .loc .stars{color:var(--gold);letter-spacing:2px;margin-left:8px}
+
+  .facts{display:flex;gap:34px;flex-wrap:wrap;margin:30px 0;padding:24px 0;border-top:1px solid rgba(42,32,23,.12);border-bottom:1px solid rgba(42,32,23,.12)}
+  .fact b{display:block;font-family:"Fraunces";font-size:26px;color:var(--pine);font-weight:500}
+  .fact span{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--moss)}
+
+  .body h2{font-size:30px;color:var(--pine);margin:34px 0 14px}
+  .body p{font-size:16px;color:var(--bark);margin-bottom:14px;max-width:62ch}
+  .amen{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px;margin-top:8px;max-width:560px}
+  .amen div{font-size:15px;color:var(--bark);display:flex;align-items:center;gap:12px}
+  .amen div::before{content:"✦";color:var(--gold);font-size:13px}
+
+  /* booking card */
+  .book{position:sticky;top:92px;background:#fff;border:1px solid rgba(42,32,23,.12);border-radius:8px;box-shadow:0 24px 50px -28px rgba(19,33,27,.5);overflow:hidden}
+  .book .head{padding:22px 24px 18px;border-bottom:1px solid rgba(42,32,23,.1)}
+  .book .head .p{display:flex;align-items:baseline;gap:8px}
+  .book .head .p b{font-family:"Fraunces";font-size:34px;color:var(--ink);font-weight:500}
+  .book .head .p span{font-size:14px;color:var(--moss);font-weight:600}
+  .book .head .badge{display:inline-block;margin-top:8px;background:rgba(70,88,58,.12);color:var(--moss);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:3px}
+  .book .form{padding:18px 24px 4px}
+  .drow{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(42,32,23,.2);border-radius:4px;overflow:hidden;margin-bottom:12px}
+  .dcell{padding:11px 14px;border-right:1px solid rgba(42,32,23,.2)}
+  .dcell:last-child{border-right:none}
+  .dcell label{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--moss);margin-bottom:3px}
+  .dcell input,.dcell select{width:100%;border:none;background:none;font-family:inherit;font-size:14px;font-weight:600;color:var(--ink);outline:none}
+  .selrow{border:1px solid rgba(42,32,23,.2);border-radius:4px;padding:11px 14px;margin-bottom:16px}
+  .selrow label{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--moss);margin-bottom:3px}
+  .selrow select{width:100%;border:none;background:none;font-family:inherit;font-size:14px;font-weight:600;outline:none}
+  .btn{display:block;width:100%;text-align:center;background:var(--pine);color:var(--cream);padding:15px;border-radius:4px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;transition:.25s}
+  .btn:hover{background:var(--clay)}
+  .calc{padding:6px 24px 22px}
+  .li{display:flex;justify-content:space-between;font-size:14.5px;color:var(--bark);padding:7px 0}
+  .li.tot{border-top:1px solid rgba(42,32,23,.14);margin-top:6px;padding-top:14px;font-family:"Fraunces";font-size:20px;font-weight:500;color:var(--ink)}
+  .save{background:rgba(177,87,47,.08);border:1px dashed rgba(177,87,47,.4);border-radius:5px;padding:13px 15px;margin:6px 24px 22px;font-size:13px;color:var(--clay);font-weight:600;display:flex;align-items:center;gap:10px}
+  .save b{font-family:"Fraunces";font-size:18px}
+  .reassure{padding:0 24px 24px;font-size:12.5px;color:var(--moss);text-align:center}
+
+  footer{background:var(--pine-deep);color:var(--sand);padding:54px 0 30px;text-align:center}
+  footer .brand{justify-content:center;color:var(--cream);margin-bottom:10px}
+  footer p{font-size:13px;color:rgba(232,220,195,.6)}
+
+  @media(max-width:880px){
+    .layout{grid-template-columns:1fr;gap:30px}
+    .book{position:static}
+    .gal{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:340px}
+    .gal .big{grid-row:auto;grid-column:1/3}
+    .gal .h4{display:none}
+  }
+  @media(max-width:560px){.amen{grid-template-columns:1fr}.gal{height:240px}}
+</style>
+</head>
+<body>
+<div class="ribbon">Preview</div>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="./" class="brand"><span class="mark">P</span><span>Pines &amp; Ponies<small>Adirondack Rentals</small></span></a>
+    <a href="./" class="back">← All stays</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="crumb"><a href="./">Stays</a> &nbsp;/&nbsp; Pine Ridge Cottage</div>
+  <div class="gal">
+    <div class="big" style="background-image:url('https://picsum.photos/seed/pineridge/900/900')"><span class="gtag">The cabin</span></div>
+    <div style="background-image:url('https://picsum.photos/seed/pineridgefire/500/500')"></div>
+    <div style="background-image:url('https://picsum.photos/seed/pineridgedock/500/500')"><span class="gtag">Private dock</span></div>
+    <div class="h4" style="background-image:url('https://picsum.photos/seed/pineridgebed/500/500')"></div>
+    <div class="h4" style="background-image:url('https://picsum.photos/seed/pineridgewoods/500/500')"><span class="gtag">+ 18 photos</span></div>
+  </div>
+
+  <div class="layout">
+    <div>
+      <div class="ttl">
+        <p class="eyebrow">Forest Cabin · Sleeps 4</p>
+        <h1>Pine Ridge <em>Cottage</em></h1>
+        <p class="loc">Southern Adirondacks, Upstate New York <span class="stars">★★★★★</span> <span style="color:var(--moss)">4.96 · 63 stays</span></p>
+      </div>
+
+      <div class="facts">
+        <div class="fact"><b>4</b><span>Guests</span></div>
+        <div class="fact"><b>2</b><span>Bedrooms</span></div>
+        <div class="fact"><b>1.5</b><span>Baths</span></div>
+        <div class="fact"><b>Yes</b><span>Pets OK</span></div>
+        <div class="fact"><b>2 nt</b><span>Minimum</span></div>
+      </div>
+
+      <div class="body">
+        <h2>A quiet cabin at the tree line.</h2>
+        <p>Pine Ridge sits where the pines give way to open water. Inside, a stone fireplace anchors the great room, the kitchen is fully stocked, and floor-to-ceiling windows pull the forest right in. Outside, a private dock waits for morning coffee and evening swims.</p>
+        <p>It is the kind of place that does exactly one thing well: it slows you down. No traffic, no crowds, just woodsmoke, water, and a porch made for doing nothing.</p>
+
+        <h2>What's here</h2>
+        <div class="amen">
+          <div>Stone wood-burning fireplace</div>
+          <div>Private dock &amp; lake access</div>
+          <div>Fully equipped kitchen</div>
+          <div>Fast Wi-Fi &amp; smart TV</div>
+          <div>Screened porch</div>
+          <div>Outdoor fire pit</div>
+          <div>Free parking on site</div>
+          <div>Kayaks &amp; paddles included</div>
+          <div>Washer &amp; dryer</div>
+          <div>Pet friendly (2 max)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- booking card -->
+    <aside>
+      <div class="book">
+        <div class="head">
+          <div class="p"><b>$285</b><span>/ night · book direct</span></div>
+          <span class="badge">Best price guaranteed</span>
+        </div>
+        <div class="form">
+          <div class="drow">
+            <div class="dcell"><label>Check in</label><input type="date" id="ci" /></div>
+            <div class="dcell"><label>Check out</label><input type="date" id="co" /></div>
+          </div>
+          <div class="selrow"><label>Guests</label><select id="g"><option>2 guests</option><option>3 guests</option><option selected>4 guests</option></select></div>
+          <button class="btn" id="reserve">Reserve</button>
+        </div>
+        <div class="calc" id="calc">
+          <div class="li"><span id="nl">$285 × 4 nights</span><span id="sub">$1,140</span></div>
+          <div class="li"><span>Cleaning fee</span><span>$95</span></div>
+          <div class="li"><span>Service fee</span><span style="color:var(--moss)">$0</span></div>
+          <div class="li tot"><span>Total</span><span id="tot">$1,235</span></div>
+        </div>
+        <div class="save"><b>Save ~$160</b> vs booking these dates on Airbnb or Vrbo.</div>
+        <p class="reassure">You won't be charged yet. We confirm every booking personally.</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <a href="./" class="brand"><span class="mark">P</span><span style="color:var(--cream)">Pines &amp; Ponies</span></a>
+  <p>© 2026 Pines &amp; Ponies · A Coles Capital Group property · Preview by Teflon Don LLC</p>
+</footer>
+
+<script>
+  var t=new Date(),iso=function(d){return d.toISOString().split('T')[0]};
+  var ci=document.getElementById('ci'),co=document.getElementById('co');
+  var inDate=new Date(t.getTime()+5*86400000),outDate=new Date(t.getTime()+9*86400000);
+  ci.min=iso(t);ci.value=iso(inDate);co.min=iso(t);co.value=iso(outDate);
+  var RATE=285,CLEAN=95;
+  function nights(){var a=new Date(ci.value),b=new Date(co.value);var n=Math.round((b-a)/86400000);return n>0?n:0}
+  function money(n){return '$'+n.toLocaleString('en-US')}
+  function recalc(){
+    var n=nights();var sub=RATE*n;var tot=sub+CLEAN;
+    document.getElementById('nl').textContent=money(RATE)+' × '+n+' night'+(n===1?'':'s');
+    document.getElementById('sub').textContent=money(sub);
+    document.getElementById('tot').textContent=money(tot);
+    var save=Math.round(sub*0.15/5)*5;
+    document.querySelector('.save b').textContent='Save ~'+money(save);
+  }
+  ci.addEventListener('change',function(){if(co.value<=ci.value){var d=new Date(ci.value);d.setDate(d.getDate()+2);co.value=iso(d)}co.min=ci.value;recalc()});
+  co.addEventListener('change',recalc);
+  document.getElementById('reserve').addEventListener('click',function(){
+    this.textContent='Request sent ✓';this.style.background='var(--moss)';
+    setTimeout(function(){var b=document.getElementById('reserve');b.textContent='Reserve';b.style.background='';},2200);
+  });
+  recalc();
+</script>
+</body>
+</html>
