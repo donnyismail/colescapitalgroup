@@ -100,7 +100,7 @@
     border-bottom:1px solid rgba(42,32,23,.1);
   }
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand{display:flex;align-items:center;gap:12px;font-family:"Fraunces";font-size:24px;letter-spacing:-.02em}
+  .brand{display:flex;align-items:center;gap:12px;font-family:"Cinzel",serif;font-size:19px;font-weight:600;letter-spacing:.01em;color:var(--pine)}
   .brand .mark{
     width:38px;height:38px;border-radius:50%;
     background:radial-gradient(circle at 35% 30%,var(--moss),var(--pine));
@@ -159,6 +159,7 @@
   }
   .bf.go{display:flex;align-items:center;padding:14px}
   .bf.go .btn{width:100%;height:100%;display:flex;align-items:center;justify-content:center;border-radius:2px}
+  .launch-note{max-width:1080px;margin:14px auto 0;text-align:center;font-size:13.5px;color:var(--moss);letter-spacing:.01em}
 
   /* sections */
   section{padding:96px 0}
@@ -225,6 +226,7 @@
 
   /* contact / footer */
   footer{background:var(--pine-deep);color:var(--sand);padding:80px 0 36px}
+  .foot-logo{width:150px;height:auto;border-radius:10px;margin-bottom:20px;box-shadow:0 10px 30px -12px rgba(0,0,0,.5)}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(203,169,104,.18)}
   .foot-grid h4{font-family:"Fraunces";font-size:28px;color:var(--cream);margin-bottom:14px}
   .foot-grid p{font-size:14.5px;color:rgba(232,220,195,.75);max-width:36ch}
@@ -262,7 +264,7 @@
 <a class="skip-link" href="#stays">Skip to main content</a>
 <div class="ribbon">Preview</div>
 
-<div class="util">Book direct &amp; pay the host, <b>no platform service fees</b> &nbsp;·&nbsp; Adirondacks, Upstate New York</div>
+<div class="util">Opening for the <b>2026 season</b> &nbsp;·&nbsp; Now taking inquiries &nbsp;·&nbsp; Book direct, skip the platform fees</div>
 
 <nav>
   <div class="wrap nav-in">
@@ -293,14 +295,15 @@
 <div class="wrap">
   <form class="bookbar rv" id="bookbar">
     <div class="bf">
-      <label>Where</label>
-      <select><option>Any retreat</option><option>Pine Ridge Cottage</option><option>Meadow View Estate</option><option>Lakeside Retreat</option><option>The Carriage House</option></select>
+      <label for="bf-where">Where</label>
+      <select id="bf-where" aria-label="Where"><option>Any retreat</option><option>Pine Ridge Cottage</option><option>Meadow View Estate</option><option>Lakeside Retreat</option><option>The Carriage House</option></select>
     </div>
-    <div class="bf"><label>Check in</label><input type="date" id="ci" /></div>
-    <div class="bf"><label>Check out</label><input type="date" id="co" /></div>
-    <div class="bf"><label>Guests</label><select><option>2 guests</option><option>4 guests</option><option>6 guests</option><option>8+ guests</option></select></div>
+    <div class="bf"><label for="ci">Check in</label><input type="date" id="ci" aria-label="Check in date" /></div>
+    <div class="bf"><label for="co">Check out</label><input type="date" id="co" aria-label="Check out date" /></div>
+    <div class="bf"><label for="bf-guests">Guests</label><select id="bf-guests" aria-label="Guests"><option>2 guests</option><option>4 guests</option><option>6 guests</option><option>8+ guests</option></select></div>
     <div class="bf go"><button type="submit" class="btn btn-gold">Search</button></div>
   </form>
+  <p class="launch-note rv">Opening for the 2026 season. Send your dates and we'll hold them, no payment until your stay is confirmed.</p>
 </div>
 
 <section id="stays">
@@ -408,6 +411,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
+        <img class="foot-logo" src="assets/logo.png" width="170" height="170" alt="Pines and Ponies, Adirondack Vacation Rentals" />
         <h4>Reserve your stay.</h4>
         <p>Tell us your dates and we'll hold the cabin. Direct booking means the best price and a real person on the other end.</p>
         <p style="margin-top:18px"><a href="mailto:hello@pinesandponies.com" class="btn btn-gold">Request to Book</a></p>

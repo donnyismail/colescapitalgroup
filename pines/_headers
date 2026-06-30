@@ -6,3 +6,12 @@
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   Cross-Origin-Opener-Policy: same-origin
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://picsum.photos https://images.unsplash.com; connect-src 'self'; frame-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'; upgrade-insecure-requests
+
+# --- OwnerRez direct-booking embed (wire up when properties go live) ---
+# OwnerRez widgets load from secure.ownerreservations.com. When embedding the
+# live booking widget, extend the CSP above with these sources:
+#   script-src  ... https://secure.ownerreservations.com
+#   frame-src   ... https://secure.ownerreservations.com
+#   connect-src ... https://secure.ownerreservations.com
+#   img-src     ... https://secure.ownerreservations.com
+# Until then the booking calculator is a client-side preview (see pine-ridge.js).

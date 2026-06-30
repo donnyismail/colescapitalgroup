@@ -138,6 +138,27 @@
   .row .desc p{font-size:14px;color:var(--muted);margin-top:4px}
   .row .val{font-family:"Cormorant Garamond";font-size:24px;color:var(--bone)}
 
+  /* upcoming projects */
+  .upcoming{background:var(--ink2)}
+  .up-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .up{border:1px solid var(--line);padding:30px 26px;position:relative;background:linear-gradient(180deg,rgba(196,163,90,.05),transparent)}
+  .up .status{display:inline-block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink);background:var(--brass-soft);padding:4px 10px;margin-bottom:16px}
+  .up .status.soft{background:transparent;color:var(--brass-soft);border:1px solid var(--line)}
+  .up h3{font-size:27px;font-weight:500;line-height:1.1}
+  .up .town{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 12px}
+  .up p{font-size:14.5px;color:var(--bone-dim)}
+
+  /* press */
+  .press .sec-label{text-align:center}
+  .press h2{text-align:center;font-size:clamp(30px,4vw,50px);font-weight:400;margin-bottom:10px}
+  .press .lede{text-align:center;color:var(--muted);max-width:46ch;margin:0 auto 50px}
+  .press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .clip{border:1px solid var(--line);padding:28px 26px;transition:.25s;display:block}
+  .clip:hover{border-color:var(--brass);background:rgba(196,163,90,.04)}
+  .clip .src{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);font-weight:700}
+  .clip h3{font-size:21px;font-weight:500;margin:12px 0 10px;line-height:1.25}
+  .clip .more{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-soft);font-weight:600}
+
   /* cta band */
   .invite{text-align:center;background:
     linear-gradient(rgba(16,20,26,.85),rgba(16,20,26,.92)),url("https://picsum.photos/seed/capitalregion/1600/700") center/cover}
@@ -146,6 +167,8 @@
   .invite p{color:var(--bone-dim);max-width:48ch;margin:22px auto 34px;font-size:16.5px}
 
   footer{background:var(--ink);border-top:1px solid var(--line);padding:70px 0 34px}
+  .foot-logo{display:inline-block;background:var(--bone);padding:16px 20px;border-radius:6px;margin-bottom:18px}
+  .foot-logo img{display:block;width:230px;height:auto}
   .foot{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:44px;padding-bottom:42px;border-bottom:1px solid var(--line)}
   .foot .brand{margin-bottom:16px}
   .foot p{font-size:14px;color:var(--muted);max-width:38ch}
@@ -186,6 +209,7 @@
       <a href="#about">Who We Are</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#projects">Track Record</a>
+      <a href="#press">Press</a>
       <a href="#contact">Contact</a>
       <a href="#contact" class="btn">Investor Inquiries</a>
     </div>
@@ -255,6 +279,45 @@
   </div>
 </section>
 
+<section class="upcoming" id="upcoming">
+  <div class="wrap">
+    <p class="sec-label rv">In the Pipeline</p>
+    <h2 class="rv" style="font-size:clamp(32px,4.2vw,54px);font-weight:400">What we're building next.</h2>
+    <div class="up-grid">
+      <div class="up rv"><span class="status">Under Contract</span><h3>Capital Region New Builds</h3><p class="town">Albany County, NY</p><p>A set of new-construction lots being developed for the rental portfolio.</p></div>
+      <div class="up rv"><span class="status soft">In Development</span><h3>Pines &amp; Ponies Estates</h3><p class="town">Adirondack Region, NY</p><p>Purpose-built short-term rental homes, bookable direct at launch.</p></div>
+      <div class="up rv"><span class="status soft">Delivering 2027</span><h3>Mixed-Use Redevelopment</h3><p class="town">Capital Region, NY</p><p>Adaptive-reuse project pairing ground-floor retail with residential above.</p></div>
+    </div>
+    <p class="rv" style="text-align:center;color:var(--muted);font-size:13px;margin-top:30px">Pipeline shown for illustration. Real projects and timelines load in once provided.</p>
+  </div>
+</section>
+
+<section class="press" id="press">
+  <div class="wrap">
+    <p class="sec-label rv">In the News</p>
+    <h2 class="rv">As featured in the press.</h2>
+    <p class="lede rv">Coverage of our projects and growth across the Capital Region.</p>
+    <div class="press-grid">
+      <a class="clip rv" href="#" aria-label="Read the Albany Business Review feature">
+        <span class="src">Albany Business Review</span>
+        <h3>Local firm expands Capital Region real estate holdings</h3>
+        <span class="more">Read the feature</span>
+      </a>
+      <a class="clip rv" href="#" aria-label="Read the Albany Business Review feature">
+        <span class="src">Albany Business Review</span>
+        <h3>Inside a growing portfolio of upstate development projects</h3>
+        <span class="more">Read the feature</span>
+      </a>
+      <a class="clip rv" href="#" aria-label="Read the Albany Business Review feature">
+        <span class="src">Albany Business Review</span>
+        <h3>From single homes to mixed-use: a long-term hold strategy</h3>
+        <span class="more">Read the feature</span>
+      </a>
+    </div>
+    <p class="rv" style="text-align:center;color:var(--muted);font-size:13px;margin-top:30px">Headlines are placeholders. Send the article links and we'll feature the real coverage.</p>
+  </div>
+</section>
+
 <section class="invite">
   <div class="wrap">
     <h2 class="rv">Let's build something <em>that lasts.</em></h2>
@@ -267,7 +330,7 @@
   <div class="wrap">
     <div class="foot">
       <div>
-        <a href="#" class="brand"><span class="crest">C</span><span class="t">Cole's Capital Group<small>Real Estate Holdings</small></span></a>
+        <span class="foot-logo"><img src="assets/logo.png" width="300" height="200" alt="Cole's Capital Group, Real Estate Holdings and Development" /></span>
         <p>A privately held real estate investment and management company based in Albany, New York.</p>
       </div>
       <div>
