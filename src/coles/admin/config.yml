@@ -1,0 +1,127 @@
+backend:
+  name: github
+  repo: donnyismail/john-cole-previews
+  branch: main
+
+local_backend: true
+
+media_folder: "src/coles/assets/uploads"
+public_folder: "assets/uploads"
+
+site_url: https://colescapitalgroup.com
+display_url: https://colescapitalgroup.com
+logo_url: https://colescapitalgroup.com/assets/icon-512.png
+
+collections:
+  - name: projects
+    label: Track Record (Completed Projects)
+    label_singular: Project
+    description: "Completed projects shown in the Track Record section."
+    folder: "src/coles/projects"
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{year}} — {{title}}"
+    sortable_fields: [year, title]
+    fields:
+      - { label: "Project name", name: title, widget: string }
+      - { label: "Year", name: year, widget: number, value_type: int }
+      - { label: "Category", name: category, widget: select, options: [Residential, Commercial, Hospitality, Development] }
+      - { label: "One-line note", name: note, widget: string }
+      - { label: "Body (optional)", name: body, widget: markdown, required: false }
+
+  - name: pipeline
+    label: Pipeline (Upcoming Projects)
+    label_singular: Upcoming project
+    description: "Projects in the pipeline, shown in the 'What we're building next' section."
+    folder: "src/coles/pipeline"
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}} ({{status}})"
+    sortable_fields: [order, title]
+    fields:
+      - { label: "Project name", name: title, widget: string }
+      - { label: "Town / area", name: town, widget: string }
+      - { label: "Status label", name: status, widget: string, hint: "e.g. Under Contract, In Development, Delivering 2027" }
+      - { label: "Subtle style (outline badge)", name: soft, widget: boolean, default: true }
+      - { label: "Short note", name: note, widget: text }
+      - { label: "Display order", name: order, widget: number, default: 5, value_type: int }
+      - { label: "Body (optional)", name: body, widget: markdown, required: false }
+
+  - name: press
+    label: Press / In the News
+    label_singular: Article
+    description: "Press coverage shown in the 'As featured in the press' section."
+    folder: "src/coles/press"
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{source}} — {{title}}"
+    sortable_fields: [order, title]
+    fields:
+      - { label: "Headline", name: title, widget: string }
+      - { label: "Publication", name: source, widget: string, default: "Albany Business Review" }
+      - { label: "Article link", name: url, widget: string, hint: "paste the article URL" }
+      - { label: "Display order", name: order, widget: number, default: 5, value_type: int }
+      - { label: "Body (optional)", name: body, widget: markdown, required: false }
+
+  - name: portfolio
+    label: Portfolio Classes
+    label_singular: Portfolio class
+    description: "The four asset classes shown in the Portfolio section."
+    folder: "src/coles/portfolio"
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}}"
+    sortable_fields: [order, title]
+    fields:
+      - { label: "Category label", name: label, widget: string, hint: "e.g. Residential" }
+      - { label: "Title", name: title, widget: string }
+      - { label: "Blurb", name: blurb, widget: text }
+      - { label: "Image", name: image, widget: image }
+      - { label: "Display order", name: order, widget: number, default: 5, value_type: int }
+      - { label: "Body (optional)", name: body, widget: markdown, required: false }
+
+  - name: stats
+    label: Headline Stats
+    label_singular: Stat
+    description: "The four big numbers under the hero."
+    folder: "src/coles/stats"
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{value}} {{label}}"
+    sortable_fields: [order]
+    fields:
+      - { label: "Value", name: value, widget: string, hint: "e.g. 20+, $50M+" }
+      - { label: "Label", name: label, widget: string }
+      - { label: "Display order", name: order, widget: number, default: 5, value_type: int }
+      - { label: "Body (optional)", name: body, widget: markdown, required: false }
+
+  - name: settings
+    label: Site Settings
+    description: "Contact info and social links."
+    files:
+      - name: site
+        label: "Cole's Capital settings"
+        file: "src/coles/_data/site.json"
+        fields:
+          - { label: "Business name", name: name, widget: string }
+          - { label: "Tagline", name: tagline, widget: string }
+          - { label: "Domain", name: domain, widget: string }
+          - { label: "Meta description", name: description, widget: text }
+          - { label: "Region", name: region, widget: string }
+          - { label: "Locality", name: locality, widget: string }
+          - { label: "Contact email", name: email, widget: string }
+          - { label: "Phone (display)", name: phone, widget: string }
+          - { label: "Phone (link)", name: phoneHref, widget: string }
+          - label: "Social links"
+            name: social
+            widget: object
+            fields:
+              - { label: Instagram, name: instagram, widget: string, required: false }
+              - { label: Facebook, name: facebook, widget: string, required: false }
+              - { label: LinkedIn, name: linkedin, widget: string, required: false }
+          - { label: "Theme color", name: themeColor, widget: color, default: "#10141a" }

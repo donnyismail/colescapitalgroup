@@ -56,9 +56,16 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection('press', (c) =>
     c.getFilteredByTag('press').sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
   );
+  eleventyConfig.addCollection('portfolio', (c) =>
+    c.getFilteredByTag('portfolio').sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
+  );
+  eleventyConfig.addCollection('stats', (c) =>
+    c.getFilteredByTag('stat').sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
+  );
 
   // money filter
   eleventyConfig.addFilter('money', (n) => '$' + Number(n).toLocaleString('en-US'));
+  eleventyConfig.addFilter('yy', (y) => "'" + String(y).slice(-2));
 
   return {
     dir: { input: 'src', output: 'dist', includes: '_includes', data: '_data' },

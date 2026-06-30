@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="assets/head.js"></script>
+<title>{{ pageTitle if pageTitle else (title + " | " + site.name) }}</title>
+<meta name="description" content="{{ description if description else site.description }}" />
+<link rel="canonical" href="{{ site.domain }}{{ canonical if canonical else '/' }}" />
+<meta name="theme-color" content="{{ site.themeColor }}" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:title" content="{{ ogTitle if ogTitle else title }}" />
+<meta property="og:description" content="{{ description if description else site.description }}" />
+<meta property="og:url" content="{{ site.domain }}{{ canonical if canonical else '/' }}" />
+<meta property="og:image" content="{{ site.domain }}/assets/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ ogTitle if ogTitle else title }}" />
+<meta name="twitter:description" content="{{ description if description else site.description }}" />
+<meta name="twitter:image" content="{{ site.domain }}/assets/og.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "{{ site.name }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.domain }}/",
+  "image": "{{ site.domain }}/assets/og.png",
+  "logo": "{{ site.domain }}/assets/icon-512.png",
+  "areaServed": "{{ site.region }}",
+  "telephone": "{{ site.phone }}",
+  "email": "{{ site.email }}",
+  "address": { "@type": "PostalAddress", "addressLocality": "Albany", "addressRegion": "NY", "addressCountry": "US" }
+}
+</script>
+{% if extraHead %}{{ extraHead | safe }}{% endif %}
+</head>
+<body>
+<a class="skip-link" href="#about">Skip to main content</a>
+<div class="ribbon">Preview</div>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand">
+      <span class="crest">C</span>
+      <span class="t">{{ site.name }}<small>{{ site.tagline }}</small></span>
+    </a>
+    <div class="nav-links" id="menu">
+      <a href="#about">Who We Are</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#projects">Track Record</a>
+      <a href="#press">Press</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn">Investor Inquiries</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+{{ content | safe }}
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <span class="foot-logo"><img src="assets/logo.png" width="300" height="200" alt="Cole's Capital Group, Real Estate Holdings and Development" /></span>
+        <p>A privately held real estate investment and management company based in {{ site.locality }}.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a>
+        <a href="#">{{ site.region }}</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="#about">Who We Are</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#projects">Track Record</a>
+        <a href="https://pinesandponies.com">Pines &amp; Ponies Rentals →</a>
+      </div>
+    </div>
+    <div class="copyr">
+      <span>© 2026 {{ site.name }}. All rights reserved.</span>
+      <span>Design by Teflon Don LLC</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/app.js"></script>
+</body>
+</html>

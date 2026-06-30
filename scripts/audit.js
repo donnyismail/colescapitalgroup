@@ -8,17 +8,20 @@ import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-// Pages that must be fully production-grade (the real sites, not the preview gateway).
+// Built pages that must be fully production-grade (scanned in dist/).
 const PAGES = [
-  'coles/index.html',
-  'pines/index.html',
-  'pines/pine-ridge.html',
+  'dist/coles/index.html',
+  'dist/pines/index.html',
+  'dist/pines/pine-ridge.html',
+  'dist/pines/meadow-view.html',
+  'dist/pines/lakeside.html',
+  'dist/pines/carriage-house.html',
 ];
 
-// Required site-level files, by site root.
+// Required site-level files, by site root (in dist/).
 const SITE_FILES = {
-  coles: ['coles/robots.txt', 'coles/sitemap.xml', 'coles/_headers'],
-  pines: ['pines/robots.txt', 'pines/sitemap.xml', 'pines/_headers'],
+  'dist/coles': ['dist/coles/robots.txt', 'dist/coles/sitemap.xml', 'dist/coles/_headers'],
+  'dist/pines': ['dist/pines/robots.txt', 'dist/pines/sitemap.xml', 'dist/pines/_headers'],
 };
 
 const failures = [];
