@@ -10,7 +10,6 @@ public_folder: "assets/uploads"
 
 site_url: https://colescapitalgroup.com
 display_url: https://colescapitalgroup.com
-logo_url: https://colescapitalgroup.com/assets/icon-512.png
 
 collections:
   - name: projects

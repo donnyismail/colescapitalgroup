@@ -41,6 +41,10 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget('src/**/*.css');
 
+  // The CMS admin pages are static (passthrough only) — don't run them through templating/layouts.
+  eleventyConfig.ignores.add('src/pines/admin/index.html');
+  eleventyConfig.ignores.add('src/coles/admin/index.html');
+
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
   // Collections (tags assigned via directory data files)

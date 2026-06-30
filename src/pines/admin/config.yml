@@ -11,7 +11,6 @@ public_folder: "assets/uploads"
 
 site_url: https://pinesandponies.com
 display_url: https://pinesandponies.com
-logo_url: https://pinesandponies.com/assets/icon-512.png
 
 collections:
   - name: properties
