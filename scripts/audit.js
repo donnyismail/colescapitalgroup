@@ -35,8 +35,11 @@ function auditPage(rel) {
   if (!has(/<html[^>]+lang=/i, html)) fail(rel, 'missing <html lang>');
   if (!has(/<meta[^>]+name=["']viewport["']/i, html)) fail(rel, 'missing viewport meta');
   if (!has(/<title>[^<]{10,70}<\/title>/i, html)) fail(rel, 'missing/short title (need 10-70 chars)');
-  if (!has(/<meta[^>]+name=["']description["'][^>]+content=["'][^"']{50,170}["']/i, html))
-    fail(rel, 'missing meta description (need 50-170 chars)');
+  const descTag = html.match(/<meta[^>]+name=["']description["'][^>]*>/i);
+  const descVal = descTag && descTag[0].match(/content=(["'])([\s\S]*?)\1/i);
+  if (!descVal) fail(rel, 'missing meta description');
+  else if (descVal[2].length < 50 || descVal[2].length > 170)
+    fail(rel, `meta description length ${descVal[2].length} (need 50-170)`);
   if (!has(/<link[^>]+rel=["']canonical["']/i, html)) fail(rel, 'missing canonical link');
 
   // Open Graph + Twitter

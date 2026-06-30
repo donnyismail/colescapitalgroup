@@ -3,11 +3,46 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pines &amp; Ponies — Adirondack Rentals | Upstate New York</title>
-<meta name="description" content="Book direct and skip the service fees. Hand-picked Adirondack cabins and equestrian estates in Upstate New York." />
+<title>Pines &amp; Ponies | Adirondack Vacation Rentals, Upstate NY</title>
+<meta name="description" content="Book hand-kept Adirondack cabins and equestrian estates in Upstate New York direct, and skip the platform service fees. Lakeside, forest, and pasture stays." />
+<link rel="canonical" href="https://pinesandponies.com/" />
+<meta name="theme-color" content="#1c3027" />
+<meta name="robots" content="index, follow" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Pines &amp; Ponies" />
+<meta property="og:title" content="Pines &amp; Ponies | Adirondack Vacation Rentals" />
+<meta property="og:description" content="Book hand-kept Adirondack cabins and equestrian estates direct, and skip the platform service fees." />
+<meta property="og:url" content="https://pinesandponies.com/" />
+<meta property="og:image" content="https://pinesandponies.com/assets/og.png" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pines &amp; Ponies | Adirondack Vacation Rentals" />
+<meta name="twitter:description" content="Book hand-kept Adirondack cabins and equestrian estates direct, and skip the platform service fees." />
+<meta name="twitter:image" content="https://pinesandponies.com/assets/og.png" />
+<!-- Icons / manifest -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Pines & Ponies",
+  "description": "Hand-kept Adirondack cabins and equestrian estates in Upstate New York, bookable direct.",
+  "url": "https://pinesandponies.com/",
+  "image": "https://pinesandponies.com/assets/og.png",
+  "logo": "https://pinesandponies.com/assets/icon-512.png",
+  "areaServed": "Adirondacks, Upstate New York",
+  "address": { "@type": "PostalAddress", "addressRegion": "NY", "addressCountry": "US" },
+  "parentOrganization": { "@type": "Organization", "name": "Cole's Capital Group" }
+}
+</script>
 <style>
   :root{
     --pine:#1c3027;
@@ -37,6 +72,10 @@
   img{display:block;max-width:100%}
   .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
 
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:300;background:var(--pine);color:var(--cream);padding:12px 18px;font-weight:700;border-radius:0 0 4px 0}
+  .skip-link:focus{left:0}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  .brand-mark{width:42px;height:42px;border-radius:50%;object-fit:cover;flex:none;box-shadow:inset 0 0 0 1.5px var(--gold-soft),0 0 0 1.5px var(--gold-soft)}
   /* preview ribbon */
   .ribbon{
     position:fixed;top:18px;right:-46px;z-index:200;
@@ -220,14 +259,15 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#stays">Skip to main content</a>
 <div class="ribbon">Preview</div>
 
 <div class="util">Book direct &amp; pay the host, <b>no platform service fees</b> &nbsp;·&nbsp; Adirondacks, Upstate New York</div>
 
 <nav>
   <div class="wrap nav-in">
-    <a href="#" class="brand">
-      <span class="mark">P</span>
+    <a href="/" class="brand">
+      <img class="brand-mark" src="/assets/icon-192.png" width="42" height="42" alt="Pines and Ponies logo" />
       <span>Pines &amp; Ponies<small>Adirondack Rentals</small></span>
     </a>
     <div class="nav-links" id="menu">
@@ -237,7 +277,7 @@
       <a href="#contact">Contact</a>
       <a href="#stays" class="btn">Check Availability</a>
     </div>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -317,7 +357,7 @@
       <div class="perk rv">
         <span class="ico">✦</span>
         <h3>No service fees</h3>
-        <p>Booking sites tack on 14&ndash;16% in guest fees. Book here and that money stays in your pocket.</p>
+        <p>Booking sites tack on 14 to 16% in guest fees. Book here and that money stays in your pocket.</p>
       </div>
       <div class="perk rv">
         <span class="ico">✦</span>
@@ -345,7 +385,7 @@
       <h2>A little land, looked after.</h2>
       <p>Pines &amp; Ponies began with a single cabin at the edge of the woods and a simple idea: give people a place that slows them down. Today our small collection spans forest, water, and pasture across the Capital Region and the southern Adirondacks.</p>
       <p>Every property is owned and maintained by us, not a faceless management company. That means real local tips, real flexibility, and a stay that actually feels personal.</p>
-      <p class="sig">&mdash; The Cole family, Upstate NY</p>
+      <p class="sig">The Cole family, Upstate NY</p>
     </div>
   </div>
 </section>
@@ -388,33 +428,12 @@
       </div>
     </div>
     <div class="copyr">
-      <span>© 2026 Pines &amp; Ponies · A Coles Capital Group property</span>
+      <span>© 2026 Pines &amp; Ponies · A Cole's Capital Group property</span>
       <span>Preview design by Teflon Don LLC · placeholder photos &amp; copy</span>
     </div>
   </div>
 </footer>
 
-<script>
-  // mobile menu
-  document.getElementById('burger').addEventListener('click',function(){
-    document.getElementById('menu').classList.toggle('open');
-  });
-  // date defaults
-  var t=new Date(),iso=function(d){return d.toISOString().split('T')[0]};
-  var ci=document.getElementById('ci'),co=document.getElementById('co');
-  var tm=new Date(t.getTime()+86400000),dd=new Date(t.getTime()+3*86400000);
-  if(ci){ci.min=iso(t);ci.value=iso(tm)}
-  if(co){co.min=iso(tm);co.value=iso(dd)}
-  // fake search
-  document.getElementById('bookbar').addEventListener('submit',function(e){
-    e.preventDefault();
-    document.getElementById('stays').scrollIntoView({behavior:'smooth'});
-  });
-  // scroll reveal
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
-  },{threshold:.14});
-  document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3*0.08)+'s';io.observe(el)});
-</script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

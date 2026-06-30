@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://colescapitalgroup.com/sitemap.xml
