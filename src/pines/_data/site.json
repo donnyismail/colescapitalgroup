@@ -1,0 +1,18 @@
+{
+  "name": "Pines & Ponies",
+  "tagline": "Adirondack Vacation Rentals",
+  "domain": "https://pinesandponies.com",
+  "description": "Book hand-kept Adirondack cabins and equestrian estates in Upstate New York direct, and skip the platform service fees. Lakeside, forest, and pasture stays.",
+  "region": "Adirondacks, Upstate New York",
+  "email": "hello@pinesandponies.com",
+  "phone": "(518) 555-0142",
+  "phoneHref": "+15185550142",
+  "launchMode": true,
+  "launchBanner": "Opening for the 2026 season",
+  "launchNote": "Opening for the 2026 season. Send your dates and we'll hold them, no payment until your stay is confirmed.",
+  "social": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "themeColor": "#1c3027"
+}

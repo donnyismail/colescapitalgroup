@@ -7,7 +7,7 @@ import {
   otaSavings,
   isValidEmail,
   validateInquiry,
-} from '../pines/assets/booking.js';
+} from '../src/pines/assets/booking.js';
 
 test('nightsBetween counts whole nights', () => {
   assert.equal(nightsBetween('2026-07-01', '2026-07-05'), 4);

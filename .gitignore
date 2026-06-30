@@ -5,3 +5,6 @@ BUILD_PLAN.md
 assets/logos/
 node_modules/
 pines/INTEGRATION.md
+email-to-john-3.txt
+dist/
+.cache/

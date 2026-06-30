@@ -5,9 +5,15 @@
   "type": "module",
   "description": "Cole's Capital Group + Pines & Ponies — Teflon Don LLC",
   "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
     "test:unit": "node --test test/*.test.js",
     "test:audit": "node scripts/audit.js",
-    "test": "npm run test:unit && npm run test:audit"
+    "test": "npm run build && npm run test:unit && npm run test:audit"
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^6.0.4"
+  }
 }
