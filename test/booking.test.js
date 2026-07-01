@@ -85,3 +85,39 @@ test('validateInquiry requires fields, valid email, and blocks honeypot spam', (
   assert.equal(spam.valid, false);
   assert.ok(spam.errors.includes('spam'));
 });
+
+// --- inquiry submission helpers (real lead capture) ---
+import { buildInquirySubject, buildMailtoUrl, buildInquiryPayload } from '../src/pines/assets/booking.js';
+
+test('buildInquirySubject formats property + dates', () => {
+  assert.equal(
+    buildInquirySubject({ property: 'Pine Ridge Cottage', checkin: '2026-08-01', checkout: '2026-08-06' }),
+    'Booking request: Pine Ridge Cottage, 2026-08-01 to 2026-08-06',
+  );
+});
+
+test('buildMailtoUrl encodes subject and body safely', () => {
+  const url = buildMailtoUrl('hi@x.com', 'A & B', 'line1\nline2 100%');
+  assert.ok(url.startsWith('mailto:hi@x.com?subject='));
+  assert.ok(url.includes('A%20%26%20B'));
+  assert.ok(url.includes('line1%0Aline2%20100%25'));
+});
+
+test('buildInquiryPayload maps fields for the form service', () => {
+  const p = buildInquiryPayload({
+    accessKey: 'k123', property: 'Lakeside Retreat', name: 'Jane', email: 'jane@x.com',
+    checkin: '2026-09-04', checkout: '2026-09-07', nights: 3, total: 1395,
+  });
+  assert.equal(p.access_key, 'k123');
+  assert.equal(p.subject, 'Booking request: Lakeside Retreat, 2026-09-04 to 2026-09-07');
+  assert.equal(p.name, 'Jane');
+  assert.equal(p.email, 'jane@x.com');
+  assert.match(p.message, /Lakeside Retreat/);
+  assert.match(p.message, /3 night/);
+  assert.match(p.message, /\$1,395/);
+  assert.equal(p.botcheck, false);
+});
+
+test('buildInquiryPayload throws without an access key (no silent misconfig)', () => {
+  assert.throws(() => buildInquiryPayload({ accessKey: '', property: 'X', name: 'A', email: 'a@b.co', checkin: '2026-01-01', checkout: '2026-01-03', nights: 2, total: 100 }));
+});

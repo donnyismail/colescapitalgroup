@@ -31,6 +31,8 @@ Click **Login** and sign in. (I'll send you your login once the sites are on the
    - **Photos**: click the photo box and upload from your computer. Drag to reorder the gallery.
 5. Click **Publish**. The site rebuilds itself in about a minute, and your new rental shows up on the home page and gets its own page automatically.
 
+Skip anything marked "optional", the site fills those in for you (page titles, search descriptions, all the technical stuff). Photos straight off your phone are fine, the site automatically shrinks them so pages stay fast. The admin works great from your phone, too.
+
 That's the whole thing. Add a cabin, it appears. Change a price, it updates everywhere.
 
 You can also click **Site Settings** to change your contact email, phone, the "Opening 2026" banner, and social links.
@@ -56,7 +58,7 @@ Click any item to edit, or use **New** to add one. Hit **Publish** and the site 
 
 - **Nothing breaks if you experiment.** Every change is saved with a history, so anything can be undone.
 - **Photos**: clear, landscape photos look best. The site automatically makes them load fast.
-- **Bookings**: the rental site shows prices and a booking box now as a preview. When your properties are ready to rent, we connect OwnerRez so guests can really book and pay, and your Airbnb/Vrbo calendars stay in sync automatically.
+- **Booking requests work today**: when a guest picks dates and hits "Request to Book," it emails you their name, email, dates, and the quoted total. You reply and confirm. When your properties are ready for real-time booking and payments, we connect OwnerRez and your Airbnb/Vrbo calendars stay in sync automatically.
 - **Furnished Finder**: it doesn't connect to anything automatically (that's just how their site works), so you'll keep managing those dates by hand.
 
 Questions? Text me. But honestly, once you've added one property, you've got it.

@@ -30,11 +30,22 @@ The admin (`/admin`) uses GitHub as its backend. GitHub OAuth needs a small auth
 - Local editing without OAuth: `npx decap-server` then open `/admin` (config has `local_backend: true`).
 
 ## 3. Images
-`eleventy-img` shortcode (`{% image %}`) is wired for local uploads (AVIF/WebP/responsive).
-Card/gallery images currently use remote placeholders; when John uploads real photos via the CMS
-they land in `assets/uploads` and can be switched to the shortcode for full optimization.
+Fully automatic. Every card/gallery/portfolio image runs through the `imgUrl` filter: remote
+placeholder URLs pass through untouched, and local CMS uploads (they land in `assets/uploads`) are
+converted to optimized 1200w WebP at build time (measured ~90% size reduction). Nothing to do at launch.
 
 ## 4. OwnerRez (Pines bookings)
 When properties go live: create OwnerRez account, add properties, connect Airbnb/Vrbo, generate the
 Book Now widget, and replace the preview booking card in `property.njk` with the embed. Uncomment the
 OwnerRez sources in `dist/pines/_headers` CSP (already documented inline).
+
+## 5. Lead capture + analytics (both CMS-configurable, zero code)
+- **Booking/inquiry forms (Web3Forms, free):** go to web3forms.com, enter the destination email
+  (jcole@colescapitalgroup.com or hello@pinesandponies.com), it emails back an access key. Paste the key
+  into Site Settings → "Form key" in the site's /admin. Until a key is set, the Request-to-Book button
+  falls back to a prefilled email (still works, just less smooth). CSP already allows api.web3forms.com.
+- **Analytics (Cloudflare Web Analytics, free):** in the Cloudflare dash → Web Analytics → add site →
+  copy the beacon token → paste into Site Settings → "Analytics token". CSP already allows the beacon.
+- **Launch day:** uncheck "Preview ribbon" in each site's Site Settings. No code changes needed.
+- **CMS is Sveltia** (Decap-compatible config, self-hosted bundle, good mobile support). Auth is still
+  GitHub — same OAuth worker setup as §2; Sveltia also supports local editing via its file-system mode.

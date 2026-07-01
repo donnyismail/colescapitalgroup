@@ -8,6 +8,13 @@
   "email": "jcole@colescapitalgroup.com",
   "phone": "(518) 330-0224",
   "phoneHref": "+15183300224",
-  "social": { "instagram": "https://instagram.com/colescapitalgroup", "facebook": "https://facebook.com/colescapitalgroup", "linkedin": "" },
-  "themeColor": "#10141a"
+  "social": {
+    "instagram": "https://instagram.com/colescapitalgroup",
+    "facebook": "https://facebook.com/colescapitalgroup",
+    "linkedin": ""
+  },
+  "themeColor": "#10141a",
+  "previewMode": true,
+  "web3formsKey": "",
+  "analyticsToken": ""
 }

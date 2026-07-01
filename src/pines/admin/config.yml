@@ -29,8 +29,8 @@ collections:
       - { label: "URL slug", name: slug, widget: string, hint: "lowercase with dashes, e.g. pine-ridge (becomes /pine-ridge.html)" }
       - { label: "Display order", name: order, widget: number, default: 5, value_type: int }
       - { label: "Short tagline", name: tagline, widget: string, hint: "shows under the name on the cards" }
-      - { label: "Hero label", name: heroType, widget: string, hint: "e.g. Forest Cabin, Waterfront Retreat" }
-      - { label: "One-line summary", name: summary, widget: string }
+      - { label: "Hero label (optional)", name: heroType, widget: string, required: false, hint: "e.g. Forest Cabin, Waterfront Retreat" }
+      - { label: "One-line summary (optional)", name: summary, widget: string, required: false, hint: "leave blank to use the tagline" }
       - { label: "Sleeps (guests)", name: sleeps, widget: number, value_type: int }
       - { label: "Bedrooms", name: beds, widget: number, value_type: int }
       - { label: "Bathrooms", name: baths, widget: number, value_type: float }
@@ -47,9 +47,8 @@ collections:
           - { label: "Photo", name: src, widget: image }
           - { label: "Caption", name: tag, widget: string, required: false }
       - { label: "Amenities", name: amenities, widget: list, hint: "one per line" }
-      - { label: "Page title (SEO)", name: pageTitle, widget: string }
-      - { label: "Meta description (SEO)", name: description, widget: text }
-      - { label: "Canonical path", name: canonical, widget: hidden }
+      - { label: "Page title (SEO, optional)", name: pageTitle, widget: string, required: false, hint: "leave blank to auto-generate" }
+      - { label: "Search description (SEO, optional)", name: description, widget: text, required: false, hint: "leave blank to auto-generate" }
       - { label: "Full description", name: body, widget: markdown }
 
   - name: settings
@@ -77,4 +76,7 @@ collections:
             fields:
               - { label: Instagram, name: instagram, widget: string, required: false }
               - { label: Facebook, name: facebook, widget: string, required: false }
+          - { label: "Preview ribbon (uncheck at launch)", name: previewMode, widget: boolean, default: true }
+          - { label: "Form key (Web3Forms access key — enables real form submissions)", name: web3formsKey, widget: string, required: false, hint: "leave blank to use email fallback" }
+          - { label: "Analytics token (Cloudflare Web Analytics)", name: analyticsToken, widget: string, required: false }
           - { label: "Theme color", name: themeColor, widget: color, default: "#1c3027" }

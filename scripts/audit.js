@@ -2,20 +2,27 @@
 // Scans built HTML pages and asserts production requirements.
 // Exit non-zero on any failure so it gates `npm test` and the build loop.
 
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
+// Property pages are DERIVED from the content folder so anything added via the
+// CMS is automatically quality-gated too.
+const propertySlugs = readdirSync(join(ROOT, 'src/pines/properties'))
+  .filter((f) => f.endsWith('.md'))
+  .map((f) => {
+    const fm = readFileSync(join(ROOT, 'src/pines/properties', f), 'utf8').match(/^slug:\s*(\S+)/m);
+    return fm && fm[1];
+  })
+  .filter(Boolean);
+
 // Built pages that must be fully production-grade (scanned in dist/).
 const PAGES = [
   'dist/coles/index.html',
   'dist/pines/index.html',
-  'dist/pines/pine-ridge.html',
-  'dist/pines/meadow-view.html',
-  'dist/pines/lakeside.html',
-  'dist/pines/carriage-house.html',
+  ...propertySlugs.map((s) => `dist/pines/${s}.html`),
 ];
 
 // Required site-level files, by site root (in dist/).

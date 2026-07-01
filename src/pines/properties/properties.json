@@ -1,7 +1,0 @@
-{
-  "tags": ["property"],
-  "layout": "pines/property.njk",
-  "permalink": "/pines/{{ slug }}.html",
-  "navBack": true,
-  "pageScript": "assets/property-booking.js"
-}

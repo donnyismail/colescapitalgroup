@@ -47,7 +47,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="ribbon">Preview</div>
+{% if site.previewMode %}<div class="ribbon">Preview</div>{% endif %}
 
 {% if site.launchMode %}<div class="util">{{ site.launchBanner }} &nbsp;·&nbsp; Now taking inquiries &nbsp;·&nbsp; Book direct, skip the platform fees</div>{% endif %}
 
@@ -106,5 +106,6 @@
 
 {% if not navBack %}<script type="module" src="assets/app.js"></script>{% endif %}
 {% if pageScript %}<script type="module" src="{{ pageScript }}"></script>{% endif %}
+{% if site.analyticsToken %}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analyticsToken }}"}'></script>{% endif %}
 </body>
 </html>

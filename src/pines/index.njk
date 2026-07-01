@@ -40,7 +40,7 @@ canonical: /
     <div class="props">
       {% for p in collections.properties %}
       <a class="card rv" href="{{ p.data.slug }}.html" style="display:block">
-        <div class="ph" style="background-image:url('{{ p.data.cardImage }}')"><span class="tag">Sleeps {{ p.data.sleeps }}</span></div>
+        <div class="ph" style="background-image:url('{{ p.data.cardImage | imgUrl('pines') }}')"><span class="tag">Sleeps {{ p.data.sleeps }}</span></div>
         <div class="body">
           <h3>{{ p.data.name }}</h3>
           <p class="meta">{{ p.data.tagline }}</p>

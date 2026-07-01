@@ -46,7 +46,7 @@
 </head>
 <body>
 <a class="skip-link" href="#about">Skip to main content</a>
-<div class="ribbon">Preview</div>
+{% if site.previewMode %}<div class="ribbon">Preview</div>{% endif %}
 
 <nav>
   <div class="wrap nav-in">
@@ -99,5 +99,6 @@
 </footer>
 
 <script type="module" src="assets/app.js"></script>
+{% if site.analyticsToken %}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analyticsToken }}"}'></script>{% endif %}
 </body>
 </html>

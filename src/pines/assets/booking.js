@@ -70,3 +70,28 @@ export function validateInquiry({ name, email, message, _gotcha } = {}) {
   if (!message || !String(message).trim()) errors.push('message');
   return { valid: errors.length === 0, errors };
 }
+
+// --- Inquiry submission helpers ---
+// The site captures booking requests two ways: a form service POST when an
+// access key is configured (site settings), or a prefilled mailto fallback.
+
+export function buildInquirySubject({ property, checkin, checkout }) {
+  return `Booking request: ${property}, ${checkin} to ${checkout}`;
+}
+
+export function buildMailtoUrl(email, subject, body) {
+  return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+export function buildInquiryPayload({ accessKey, property, name, email, checkin, checkout, nights, total, message = '' }) {
+  if (!accessKey) throw new Error('buildInquiryPayload: missing form access key');
+  const summary = `Booking request for ${property}\nDates: ${checkin} to ${checkout} (${nights} night${nights === 1 ? '' : 's'})\nQuoted total: $${Number(total).toLocaleString('en-US')}\nGuest: ${name} <${email}>${message ? `\n\n${message}` : ''}`;
+  return {
+    access_key: accessKey,
+    subject: buildInquirySubject({ property, checkin, checkout }),
+    name,
+    email,
+    message: summary,
+    botcheck: false,
+  };
+}
