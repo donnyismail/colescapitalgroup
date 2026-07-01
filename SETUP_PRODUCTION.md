@@ -47,5 +47,8 @@ OwnerRez sources in `dist/pines/_headers` CSP (already documented inline).
 - **Analytics (Cloudflare Web Analytics, free):** in the Cloudflare dash → Web Analytics → add site →
   copy the beacon token → paste into Site Settings → "Analytics token". CSP already allows the beacon.
 - **Launch day:** uncheck "Preview ribbon" in each site's Site Settings. No code changes needed.
-- **CMS is Sveltia** (Decap-compatible config, self-hosted bundle, good mobile support). Auth is still
-  GitHub — same OAuth worker setup as §2; Sveltia also supports local editing via its file-system mode.
+- **CMS is Sveltia** (Decap-compatible config, self-hosted bundle, good mobile support). Two login options,
+  verified live: "Sign In with GitHub" (needs the §2 OAuth worker) OR **"Sign In Using Access Token"** — a
+  GitHub fine-grained PAT scoped to this repo works with NO OAuth worker at all. Easiest launch path: create
+  a PAT for John's GitHub account (contents: read/write on this repo) and he pastes it once; the worker
+  becomes optional polish.
