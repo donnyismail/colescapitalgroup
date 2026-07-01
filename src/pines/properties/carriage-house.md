@@ -13,7 +13,7 @@ beds: 1
 baths: 1
 pets: false
 minNights: 2
-rate: 240
+rate: 315
 cleaning: 85
 cardImage: https://picsum.photos/seed/carriagehouse/700/520
 gallery:

@@ -13,7 +13,7 @@ beds: 3
 baths: 2
 pets: false
 minNights: 2
-rate: 350
+rate: 425
 cleaning: 120
 cardImage: https://picsum.photos/seed/lakeside/700/520
 gallery:

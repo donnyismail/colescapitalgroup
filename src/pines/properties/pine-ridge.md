@@ -13,7 +13,7 @@ beds: 2
 baths: 1.5
 pets: true
 minNights: 2
-rate: 285
+rate: 345
 cleaning: 95
 cardImage: https://picsum.photos/seed/pineridge/700/520
 gallery:

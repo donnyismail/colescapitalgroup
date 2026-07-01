@@ -13,7 +13,7 @@ beds: 5
 baths: 3
 pets: true
 minNights: 2
-rate: 425
+rate: 550
 cleaning: 145
 cardImage: https://picsum.photos/seed/meadowview/700/520
 gallery:
