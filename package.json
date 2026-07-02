@@ -8,7 +8,8 @@
     "build": "eleventy",
     "dev": "eleventy --serve",
     "test:audit": "node scripts/audit.js",
-    "test": "npm run build && npm run test:audit"
+    "test": "npm run build && npm run test:audit",
+    "test:live": "node scripts/qa-crawl.js"
   },
   "license": "UNLICENSED",
   "dependencies": {

@@ -46,3 +46,10 @@ npm run dev   # local preview at localhost:8080
 - `src/admin/` — visual CMS (Sveltia). **If this repo is renamed/transferred, update
   `backend.repo` in `src/admin/config.yml`.**
 - `src/headers.njk` — security headers/CSP. `scripts/audit.js` — quality gate.
+
+## Live QA
+After any deploy, run the full-site crawler against the live site:
+```
+node scripts/qa-crawl.js https://<the-live-url>
+```
+It checks every page, every link, every asset, every anchor, JSON-LD, canonicals, and og images. Fix any FAILURES before telling John something is done. (Bot-walled domains like Facebook/bizjournals appear as warnings — that is expected.)
