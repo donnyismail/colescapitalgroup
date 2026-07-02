@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: donnyismail/colescapitalgroup
+  repo: jcole7172/colescapitalgroup
   branch: main
 
 local_backend: true
