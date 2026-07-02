@@ -61,4 +61,26 @@ Click any item to edit, or use **New** to add one. Hit **Publish** and the site 
 - **Booking requests work today**: when a guest picks dates and hits "Request to Book," it emails you their name, email, dates, and the quoted total. You reply and confirm. When your properties are ready for real-time booking and payments, we connect OwnerRez and your Airbnb/Vrbo calendars stay in sync automatically.
 - **Furnished Finder**: it doesn't connect to anything automatically (that's just how their site works), so you'll keep managing those dates by hand.
 
+---
+
+## Bigger changes: just ask Claude
+
+The admin covers day-to-day edits. For anything bigger ("add a whole new cabin", "change the
+wording on the front page", "raise all my prices 10%", "the site looks wrong on my phone"),
+you don't need me, you can ask Claude, the AI assistant:
+
+1. Go to **claude.ai/code** and sign in.
+2. Connect your GitHub account (the same one your websites live under).
+3. Open your website project and type what you want in plain English, exactly like texting me.
+
+Claude already knows how your sites are built, it reads the instructions I left inside the
+project. It makes the change, tests everything, publishes it, and tells you when it's live.
+Every change is saved with history, so nothing is ever unfixable.
+
+Examples of things you can literally type:
+- "Add a new cabin called Birch Hollow, $395 a night, sleeps 6, hot tub, lakefront"
+- "The Malta project is finished, move it to the track record"
+- "Swap the big photo on the Cole's Capital homepage for the one I uploaded"
+- "Take the preview banner off, we're going live"
+
 Questions? Text me. But honestly, once you've added one property, you've got it.
