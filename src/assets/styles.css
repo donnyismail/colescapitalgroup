@@ -24,9 +24,8 @@
   nav{position:sticky;top:0;z-index:100;background:rgba(16,20,26,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:82px}
   .brand{display:flex;align-items:center;gap:14px}
-  .crest{width:42px;height:42px;border:1.5px solid var(--brass);display:grid;place-items:center;font-family:"Cormorant Garamond";font-size:22px;color:var(--brass-soft);flex:none}
-  .brand .t{font-family:"Cormorant Garamond";font-size:25px;letter-spacing:.01em;line-height:1}
-  .brand .t small{display:block;font-family:"Archivo";font-size:9px;letter-spacing:.42em;text-transform:uppercase;color:var(--brass);margin-top:5px;font-weight:600}
+  .brand-logo-plate{display:flex;align-items:center;background:#fdfcfa;padding:8px 16px;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.25)}
+  .brand-logo{height:52px;width:auto;display:block}
   .nav-links{display:flex;align-items:center;gap:36px}
   .nav-links a{font-size:13px;letter-spacing:.05em;font-weight:500;color:var(--bone-dim);transition:.2s}
   .nav-links a:hover{color:var(--brass-soft)}
