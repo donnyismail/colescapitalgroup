@@ -103,7 +103,7 @@
   .up .status{display:inline-block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink);background:var(--brass-soft);padding:4px 10px;margin-bottom:16px}
   .up .status.soft{background:transparent;color:var(--brass-soft);border:1px solid var(--line)}
   .up h3{font-size:27px;font-weight:500;line-height:1.1}
-  .up .town{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 12px}
+  .up .kind{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 12px}
   .up p{font-size:14.5px;color:var(--bone-dim)}
 
   /* press */

@@ -1,8 +1,8 @@
 ---
-title: Route 9 Real Estate Project
+title: Commercial Development
 town: Malta, NY
 status: Fall 2026
 soft: false
-note: Ground-up commercial real estate development on the Route 9 corridor.
+note: Commercial warehouse close to downtown, on the Route 9 corridor.
 order: 1
 ---

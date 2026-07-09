@@ -1,8 +1,8 @@
 ---
-title: Commercial Warehouse
+title: Commercial Development
 town: Colonie, NY
 status: Summer 2027
 soft: false
 note: New commercial warehouse space in development.
-order: 2
+order: 3
 ---

@@ -1,8 +1,8 @@
 ---
-title: Lake George Residential — Phase II
+title: Residential Development
 town: Lake George, NY
 status: Fall 2026
 soft: false
 note: Second residential development in the Lake George area.
-order: 5
+order: 2
 ---
