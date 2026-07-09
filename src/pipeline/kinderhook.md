@@ -3,6 +3,6 @@ title: Commercial Development
 town: Kinderhook, NY
 status: TBD
 soft: true
-note: Commercial development project in Kinderhook.
+note: Coming soon.
 order: 7
 ---

@@ -3,6 +3,6 @@ title: Commercial Development
 town: Halfmoon, NY
 status: Fall 2027
 soft: false
-note: Commercial development project in Halfmoon.
+note: On Route 9.
 order: 5
 ---

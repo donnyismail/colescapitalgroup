@@ -3,6 +3,6 @@ title: Industrial Park
 town: Halfmoon, NY
 status: TBD
 soft: true
-note: Industrial park development in Halfmoon.
+note: On Route 9.
 order: 9
 ---

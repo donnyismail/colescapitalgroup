@@ -3,6 +3,6 @@ title: Commercial Development
 town: Queensbury, NY
 status: TBD
 soft: true
-note: Commercial development project in Queensbury.
+note: Coming soon.
 order: 8
 ---

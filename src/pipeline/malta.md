@@ -3,6 +3,6 @@ title: Commercial Development
 town: Malta, NY
 status: Fall 2026
 soft: false
-note: Commercial warehouse close to downtown, on the Route 9 corridor.
+note: Route 9, close to downtown.
 order: 1
 ---
