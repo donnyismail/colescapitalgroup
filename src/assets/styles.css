@@ -144,9 +144,11 @@
     .pf-grid{grid-template-columns:1fr}
     .foot{grid-template-columns:1fr 1fr}
   }
-  @media(max-width:640px){
+  @media(max-width:1080px){
     .nav-links{display:none}.burger{display:flex}
     .nav-links.open{display:flex;position:absolute;top:82px;left:0;right:0;flex-direction:column;background:var(--ink2);padding:24px 30px;gap:18px;border-bottom:1px solid var(--line)}
+  }
+  @media(max-width:640px){
     .stats-in{grid-template-columns:1fr}.stat{border-right:none;border-bottom:1px solid var(--line)}
     .row{grid-template-columns:1fr;gap:6px}.row .val{margin-top:8px}
     .foot{grid-template-columns:1fr}section{padding:74px 0}
