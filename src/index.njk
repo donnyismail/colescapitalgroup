@@ -54,7 +54,7 @@ canonical: /
 <section id="projects">
   <div class="wrap ledger">
     <p class="sec-label">Track Record</p>
-    <h2>A history of finishing well.</h2>
+    <h2>What we've built.</h2>
     {% for p in collections.projects %}
     <div class="row rv"><span class="yr">{{ p.data.year | yy }}</span><div class="desc"><h3>{{ p.data.title }}</h3><p>{{ p.data.note }}</p></div><span class="val">{{ p.data.category }}</span></div>
     {% endfor %}
