@@ -1,6 +1,6 @@
 ---
 title: Residential Development
-town: Saratoga Springs, NY
+town: Clifton Park, NY
 status: Summer 2027
 soft: false
 note: Five minutes from Broadway.
