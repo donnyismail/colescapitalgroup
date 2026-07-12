@@ -60,7 +60,7 @@
       <a href="#upcoming">In the Pipeline</a>
       <a href="#press">In the News</a>
       <a href="#contact">Contact</a>
-      <a href="#contact" class="btn">Inquire</a>
+      <a href="#contact" class="btn js-inquire">Inquire</a>
     </div>
     <button class="burger" id="burger" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -96,6 +96,33 @@
     </div>
   </div>
 </footer>
+
+<div class="modal-overlay" id="inquireModal" aria-hidden="true">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="inquireTitle">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <h3 id="inquireTitle">Get in Touch</h3>
+    <p class="modal-sub">Send us a message and we'll get back to you shortly.</p>
+    <form id="inquireForm" data-mailto="{{ site.email }}" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{{ site.web3formsKey }}" />
+      <input type="hidden" name="subject" value="New inquiry from {{ site.domain }}" />
+      <input type="hidden" name="from_name" value="{{ site.name }} website" />
+      <div class="form-row">
+        <label for="inq-name">Name</label>
+        <input type="text" id="inq-name" name="name" required />
+      </div>
+      <div class="form-row">
+        <label for="inq-email">Email</label>
+        <input type="email" id="inq-email" name="email" required />
+      </div>
+      <div class="form-row">
+        <label for="inq-message">Message</label>
+        <textarea id="inq-message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-fill">Send Message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
 
 <script type="module" src="assets/app.js"></script>
 {% if site.analyticsToken %}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analyticsToken }}"}'></script>{% endif %}
