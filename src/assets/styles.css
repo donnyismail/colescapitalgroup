@@ -24,7 +24,7 @@
   nav{position:sticky;top:0;z-index:100;background:rgba(22,24,28,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:82px}
   .brand{display:flex;align-items:center;gap:14px}
-  .brand-logo-plate{display:flex;align-items:center;background:var(--ink2);padding:8px 16px;border-radius:8px}
+  .brand-logo-plate{display:flex;align-items:center}
   .brand-logo{height:58px;width:auto;display:block}
   .nav-links{display:flex;align-items:center;gap:36px}
   .nav-links a{font-size:13px;letter-spacing:.05em;font-weight:500;color:var(--bone-dim);transition:.2s}
@@ -130,7 +130,7 @@
   .invite p{color:var(--bone-dim);max-width:48ch;margin:22px auto 34px;font-size:16.5px}
 
   footer{background:var(--ink);border-top:1px solid var(--line);padding:70px 0 34px}
-  .foot-logo{display:inline-block;background:var(--ink2);padding:14px 18px;border-radius:8px;margin-bottom:18px}
+  .foot-logo{display:inline-block;margin-bottom:18px}
   .foot-logo img{display:block;width:260px;height:auto}
   .foot{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:44px;padding-bottom:42px;border-bottom:1px solid var(--line)}
   .foot .brand{margin-bottom:16px}
