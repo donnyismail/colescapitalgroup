@@ -79,7 +79,7 @@ canonical: /
     <h2 class="rv" style="font-size:clamp(32px,4.2vw,54px);font-weight:400">What we're building next.</h2>
     <div class="up-grid">
       {% for p in collections.pipeline %}
-      <div class="up rv"><span class="status{% if p.data.soft %} soft{% endif %}">{{ p.data.status }}</span><h3>{{ p.data.town }}</h3><p class="kind">{{ p.data.title }}</p><p>{{ p.data.note }}</p></div>
+      <div class="up rv"><span class="status{% if p.data.soft %} soft{% endif %}">{{ p.data.status }}</span><h3>{{ p.data.town }}</h3><p class="kind">{{ p.data.title }}</p></div>
       {% endfor %}
     </div>
   </div>
