@@ -95,6 +95,11 @@
   .row .desc h3{font-size:24px;font-weight:500}
   .row .desc p{font-size:14px;color:var(--muted);margin-top:4px}
   .row .val{font-family:"Cormorant Garamond";font-size:24px;color:var(--brass-soft)}
+  .managed{margin-top:14px;padding-top:40px;border-top:1px solid var(--line);text-align:center}
+  .managed-label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+  .managed-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 36px}
+  .managed-links a{font-family:"Cormorant Garamond";font-size:21px;color:var(--brass-soft);border-bottom:1px solid transparent;padding-bottom:2px;transition:.2s}
+  .managed-links a:hover{color:var(--brass);border-color:var(--brass)}
 
   /* upcoming projects */
   .upcoming{background:var(--ink2)}

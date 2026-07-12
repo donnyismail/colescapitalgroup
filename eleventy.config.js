@@ -47,6 +47,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection('stats', (c) =>
     c.getFilteredByTag('stat').sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
   );
+  eleventyConfig.addCollection('companies', (c) =>
+    c.getFilteredByTag('company').sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
+  );
 
   eleventyConfig.addFilter('yy', (y) => "'" + String(y).slice(-2));
 

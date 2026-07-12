@@ -62,6 +62,14 @@ canonical: /
     {% for p in collections.projects %}
     <div class="row rv"><span class="yr">{{ p.data.year | yy }}</span><div class="desc"><h3>{{ p.data.title }}</h3><p>{{ p.data.note }}</p></div><span class="val">{{ p.data.category }}</span></div>
     {% endfor %}
+    <div class="managed rv">
+      <p class="managed-label">Under Our Management</p>
+      <div class="managed-links">
+        {% for c in collections.companies %}
+        <a href="{{ c.data.url }}" target="_blank" rel="noopener">{{ c.data.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </section>
 
