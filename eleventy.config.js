@@ -24,7 +24,7 @@ export default function (eleventyConfig) {
         widths: [1200],
         formats: ['webp'],
         outputDir: './dist/img/',
-        urlPath: 'img/',
+        urlPath: '/img/',
       });
       return metadata.webp[0].url;
     })()

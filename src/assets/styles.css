@@ -67,7 +67,7 @@
   .who h2 em{font-style:italic;color:var(--brass-soft)}
   .who p{color:var(--bone-dim);font-size:16.5px;margin-top:20px}
   .who-img{height:540px;position:relative;
-    background:linear-gradient(160deg,rgba(22,24,28,.1),rgba(22,24,28,.5)),url("https://picsum.photos/seed/brownstone/900/1100") center/cover;
+    background:linear-gradient(160deg,rgba(22,24,28,.1),rgba(22,24,28,.5)),url("uploads/saratoga-racecourse.png") center/cover;
     border:1px solid var(--line)}
   .who-img::after{content:"EST. SARATOGA SPRINGS, NY";position:absolute;bottom:24px;left:24px;font-size:10px;letter-spacing:.3em;color:var(--brass-soft);font-weight:600;background:rgba(22,24,28,.7);padding:8px 14px;border:1px solid var(--line)}
 
