@@ -45,7 +45,11 @@ canonical: /
     </div>
     <div class="pf-grid">
       {% for p in collections.portfolio %}
+      {% if p.data.link %}
+      <a class="pf rv" href="{{ p.data.link }}" target="_blank" rel="noopener"><div class="bg" style="background-image:url('{{ p.data.image | imgUrl }}')"></div><div class="cap"><small>{{ p.data.label }}</small><h3>{{ p.data.title }}</h3><p>{{ p.data.blurb }}</p></div></a>
+      {% else %}
       <div class="pf rv"><div class="bg" style="background-image:url('{{ p.data.image | imgUrl }}')"></div><div class="cap"><small>{{ p.data.label }}</small><h3>{{ p.data.title }}</h3><p>{{ p.data.blurb }}</p></div></div>
+      {% endif %}
       {% endfor %}
     </div>
   </div>
